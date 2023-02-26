@@ -1,8 +1,8 @@
 function main() {
-    let value = prompt("Введите температуру в градусах цельсия");
-    if (String(parseFloat(value)) === String(value)) {
-        value = parseFloat(value)
-        alert(`Цельсий:${Math.round(value * 100) / 100} Фаренгейт:${Math.round(((9 / 5) * value + 32) * 100) / 100}`);
+    const valueC = Number.parseFloat(prompt("Введите температуру в градусах цельсия"));
+    if (Number.isFinite(valueC)) {
+        const valueF = ((9 / 5) * valueC + 32);
+        alert(`Цельсий:${valueC.toFixed(2)} Фаренгейт:${valueF.toFixed(2)}`);
     } else {
         alert('Не правильный ввод');
     }

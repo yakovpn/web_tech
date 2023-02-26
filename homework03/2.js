@@ -2,10 +2,10 @@
  * @param {string} name
  */
 function greeting(name) {
-    console.log(`Привет ${name.charAt(0).toUpperCase() + name.slice(1)}`)
+    console.log(`Привет ${name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}`)
 }
 function main() {
-    let name = prompt("Введите ваше имя");
+    const name = prompt("Введите ваше имя");
     greeting(name);
 }
 if (document.readyState == 'loading') {
